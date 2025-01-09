@@ -20,14 +20,9 @@ A long time ago in a galaxy far far away, the arma 3 community created the 501st
     - [Typography](#Typography)
     - [Imagery](#Imagery)
 - [Page Features](#page-features)
-    - [Nav Bar](#navbar)
-    - [Hero Images](#hero-images)
-        - [Home page Hero](#home-page-hero)
-        - [Services page Hero](#services-page-hero)
+    - 
     - [Main Content](#main-content)
-        - [About](#about)
-        - [Tips](#tips)
-        - [Therapy](#therapy)
+        - 
     - [Footer](#footer)
 - [Responsivity](#responsivity)
     - [Mobile Layout](#mobile-layout)
@@ -59,18 +54,6 @@ Once the issues were made, I added them to my project board and assigned them la
 
 ## User Design
 Since this site is heavily influenced by Star Wars, I wanted to keep the styling similar to the main colours used for their graphics - this is where the black and yellow come from on the pallete.
-Since this site is aimed for the 501st unit (which I am a part of) I wanted to include more colours that connect to the unit specifically. For those that know Star Wars, they will know that their colours are blue (on top of the clone trooper white). For those that don't - here is a photo of Commander Rex to show his colours:
-
-![Commander Rex - Star Wars](media/readme-images/commander%20rex.jpg)
-
-and here is a snippet from the offical Star Wars wiki page:
-![Screenshot of the Wiki page taking about 501st colours](media/readme-images/color%20pallete%20influence.png)
-
-Using this photo and some research the closest blue I could link was French blue and so, combining all the colours together I created this pallete using Coolors.
-![Colour Pallete from Coolors](media/readme-images/Comlink%20colour%20pallete.png)
-
-While planning I wasn't 100% certain how many colours I would need and so keeping on the Star wars theme I went to get more colours - just in case.
-![Lightsaber Colours](media/readme-images/lightsaber%20colors.png)
 
 ### Wireframes
 
@@ -80,9 +63,26 @@ While planning I wasn't 100% certain how many colours I would need and so keepin
 
 ### Colour Scheme
 
+Since this site is aimed for the 501st unit (which I am a part of) I wanted to include more colours that connect to the unit specifically. For those that know Star Wars, they will know that their colours are blue (on top of the clone trooper white). For those that don't - here is a photo of the 501st Commander, Rex, to show his colours:
+
+![Commander Rex - Star Wars](media/readme-images/commander%20rex.jpg)
+
+and here is a snippet from the offical Star Wars wiki page:
+![Screenshot of the Wiki page taking about 501st colours](media/readme-images/color%20pallete%20influence.png)
+
+Using this photo and some research the closest blue I could link was French blue (hex code: #0072BB) and so, combining all the colours together I created this pallete using Coolors.
+![Colour Pallete from Coolors](media/readme-images/Comlink%20colour%20pallete.png)
+
+While planning I wasn't 100% certain how many colours I would need and so, keeping on the Star wars theme, I went to get more colours - just in case.
+![Lightsaber Colours](media/readme-images/lightsaber%20colors.png)
 
 ### Typography 
+As much as I would have loved to use the Star Wars offical font - I opted to choose an easier to read and more relaxed looking set of fonts. I tried to keep with the galactic theme and so looked for quite robotic and sharp fonts. I settled on:
+#### Header: Orbitron
+![Orbitron text sample](media/readme-images/font%20choice%20-%20orbitron.png)
 
+#### Body: Montserrat
+![Montserrat text sample](media/readme-images/font%20choice%20-%20montserrat.png)
 
 ### Images
 
@@ -90,28 +90,28 @@ While planning I wasn't 100% certain how many colours I would need and so keepin
 
 ## Page Features
 
-### NavBar
+### -
 
 
-### Hero Images
+### -
 
 
-#### Home page Hero
+#### -
 
 
-#### Services page Hero
+#### -
 
 
 ### Main Content
-.
-
-#### About
 
 
-#### Tips
+#### -
 
 
-#### Therapy
+#### -
+
+
+#### -
 
 
 ### Footer
