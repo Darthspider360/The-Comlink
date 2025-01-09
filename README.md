@@ -156,12 +156,9 @@ I deployed my site using github and github pages. These are the steps I did:
 
 ## Credits
 - Amy for the README Layout idea
-- Code Institute for the code snippets (commented inline)
 - Copilot for design and coding support
-- Canva for some images (mentioned above)
-- istock Photo for an image (mentioned above)
-- BACP for the information provided in the services section
 - HTML & CSS Validator
 - Devtools Lighthouse
 - AutoPrifix
-- Mugs of tea and bacon sandwhiches for moral support
+- Mugs of tea and bacon sandwiches for moral support
+- Cans of Monster for energy (tracker: 1)
