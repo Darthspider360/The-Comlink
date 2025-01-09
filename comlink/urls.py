@@ -20,6 +20,4 @@ from feed.views import my_feed
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('feed/', my_feed, name='feed'),
-    path('', include('my_app.urls'), name='home'),
 ]
