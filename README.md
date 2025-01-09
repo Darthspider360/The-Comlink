@@ -60,6 +60,7 @@ Once the issues were made, I added them to my project board and assigned them la
 ## User Design
 Since this site is heavily influenced by Star Wars, I wanted to keep the styling similar to the main colours used for their graphics - this is where the black and yellow come from on the pallete.
 Since this site is aimed for the 501st unit (which I am a part of) I wanted to include more colours that connect to the unit specifically. For those that know Star Wars, they will know that their colours are blue (on top of the clone trooper white). For those that don't - here is a photo of Commander Rex to show his colours:
+
 ![Commander Rex - Star Wars](media/readme-images/commander%20rex.jpg)
 
 and here is a snippet from the offical Star Wars wiki page:
