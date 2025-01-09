@@ -56,9 +56,8 @@ Once the issues were made, I added them to my project board and assigned them la
 Since this site is heavily influenced by Star Wars, I wanted to keep the styling similar to the main colours used for their graphics - this is where the black and yellow come from on the pallete.
 
 ### Wireframes
-
-
-
+I drew up the wireframes using sketchbook - a drawing app that I use. The layout is simple so that the site can be easy to use. I only drew how the profile page will change on tablet and pc screens as the main feed page will just look the same only bigger.
+![Wireframes screenshot](media/readme-images/wireframes.png)
 
 
 ### Colour Scheme
