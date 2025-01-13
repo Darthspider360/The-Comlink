@@ -41,24 +41,13 @@
             </div>
         </div>
     </nav>
-    <header>
-        <h1>base</h1>
-    </header>
+    
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section.</p>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is the about section.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>This is the contact section.</p>
-        </section>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
     </main>
-    <footer class="mt-auto">
+    <footer class="ms-auto">
         <p>&copy; 2023 My Website</p>
     </footer>
     <!-- Bootstrap JS -->
