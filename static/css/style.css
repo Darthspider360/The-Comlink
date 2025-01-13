@@ -1,17 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body{
     font-family: 'Orbitron', sans-serif;
-    background-image: url(/static/images/images.jpg);
+    background-image: url(images.jpg);
     color: #ffe81f;
+    display: flex;
+    flex-direction: column;
 }
 
 p {
     font-family: 'Montserrat', sans-serif;
 }
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+}
+
 /* navbar */
-
-
 
 .navbar-custom, .nav-link {
     color: #ffe81f;
@@ -19,4 +34,14 @@ p {
 
 .nav-link.active {
     color: #0072bb !important;
+}
+
+/* card */
+
+.card {
+    background-color: #f2eded27;
+    color: #ffe81f;
+    width: 75%;
+    display: flex;
+    justify-content: center;
 }
