@@ -15,10 +15,13 @@ body{
 
 p {
     font-family: 'Montserrat', sans-serif;
+    color:#ffe81f
 }
 
 .content {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .footer {
@@ -44,4 +47,24 @@ p {
     width: 75%;
     display: flex;
     justify-content: center;
+}
+
+/* sign in/out */
+#signing{
+    font-size: larger;
+    width: auto;
+    display: inline-block;
+}
+
+#signing button{
+    background-color: #fffafa34;
+    color: #ffe81f;
+    font-size: medium;
+}
+
+.sign-out-glowing-box{
+    box-shadow: 0 0 5px red, 0 0 25px red;
+}
+.sign-out-glowing-box:hover{
+   box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
 }
