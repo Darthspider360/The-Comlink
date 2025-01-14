@@ -83,3 +83,19 @@ p {
 .sign-up-glowing-box:hover{
     box-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 100px blue, 0 0 200px blue;
 }
+
+#signup_form ul{
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+/* changing the styling of the log in and sign up forms - Credits to Amy for the help */
+#id_password1, 
+#id_password2,
+#id_email,
+#id_username,
+#id_login,
+#id_password {
+    background-color: #fffafa34;
+    color: #ffe81f;
+}
