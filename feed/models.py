@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
+    post = models.TextField()
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="feed_posts")
     content = models.TextField()
@@ -13,7 +14,7 @@ class Post(models.Model):
     class Meta:
         ordering = ["-created_on"]
     def __str__(self):
-        return f"{self.title} | written by {self.author}"
+        return f"written by {self.author}"
 
 class Comment(models.Model):
     post = models.ForeignKey(

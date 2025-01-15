@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
 <div class="col-md-8 offset-md-2">
 <h3>Write your post:</h3> 
-    <form action="/feed/" method="post">
-        {% csrf_token %}
-        <div class="form-group">
-            {{ post_form.content }}
-        </div> 
-        <a button type="submit" class="btn btn-primary" href="{% url 'home' %}">Submit</a>
-        
-    </form>
+<form id="Post_form" method="post">
+    {{ Post_form | crispy }}
+    {% csrf_token %}
+    <button id="postButton" type="submit" class="btn btn-signup btn-lg">Post!</button>
+</form>
 {% endblock %}

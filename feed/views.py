@@ -7,22 +7,18 @@ from .forms import CommentForm, PostForm
 
 # https://stackoverflow.com/questions/68968059/how-can-i-allow-users-to-create-their-own-posts-in-django
 def create_post(request):
-    queryset = Post.content
-    template_name = "post_form.html"
-    Postform = PostForm()
-    if request.method == 'POST':
-        post_form = PostForm(request.POST)
-        if post_form.is_valid():
-            post = Post(
-                content=post_form.cleaned_data["content"],
-            )
+    if request.method == "POST":
+        Post_form = PostForm(request.POST)
+        if Post_form.is_valid():
+            post = Post_form.save(commit=False)
+            post.author = request.user
+            post.post = post
             post.save()
-
-    context = {
-        "create_post":create_post,
-    }
-
-    return render(request, "post_form.html",)
+            messages.add_message(request, messages.SUCCESS,
+            'posted')
+            return HttpResponseRedirect(reverse("home")) #redirecting to a new URL
+    Post_form = PostForm()
+    return render(request, "feed/post_form.html", {"Post_form": Post_form})
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
