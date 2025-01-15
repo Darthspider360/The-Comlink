@@ -3,7 +3,26 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
+
+# https://stackoverflow.com/questions/68968059/how-can-i-allow-users-to-create-their-own-posts-in-django
+def create_post(request):
+    queryset = Post.content
+    template_name = "post_form.html"
+    Postform = PostForm()
+    if request.method == 'POST':
+        post_form = PostForm(request.POST)
+        if post_form.is_valid():
+            post = Post(
+                content=post_form.cleaned_data["content"],
+            )
+            post.save()
+
+    context = {
+        "create_post":create_post,
+    }
+
+    return render(request, "post_form.html",)
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
@@ -11,23 +30,23 @@ class PostList(generic.ListView):
 
 def post_detail(request, slug):
     """
-    Display an individual :model:`blog.Post`.
+    Display an individual :model:`feed.Post`.
 
     **Context**
 
     ``post``
-        An instance of :model:`blog.Post`.
+        An instance of :model:`feed.Post`.
 
     **Template:**
 
-    :template:`blog/post_detail.html`
+    :template:`feed/post_detail.html`
     """
     if request.method == "POST":
         print("Received a POST request")
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
-    comment_count = post.comments.filter(approved=True).count() 
+    comment_count = post.comments.all().count() 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -42,7 +61,7 @@ def post_detail(request, slug):
     print("About to render template")
     return render(
         request,
-        "blog/post_detail.html",
+        "feed/post_detail.html",
         { "post": post,
         "comments": comments,
         "comment_count": comment_count,

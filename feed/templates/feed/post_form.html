@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="col-md-8 offset-md-2">
+<h3>Write your post:</h3> 
+    <form action="/feed/" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ post_form.content }}
+        </div> 
+        <a button type="submit" class="btn btn-primary" href="{% url 'home' %}">Submit</a>
+        
+    </form>
+{% endblock %}
