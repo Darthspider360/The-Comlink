@@ -67,7 +67,13 @@ p {
     margin-bottom: 5px;
     border: none;
 }
-
+.image-container {
+    position: relative;
+}
+.scale {
+    width: 100%;
+    height: auto;
+}
 
 /* sign in/out */
 #signing{

@@ -70,6 +70,10 @@ p {
 .image-container {
     position: relative;
 }
+.scale {
+    width: 100%;
+    height: auto;
+}
 
 /* sign in/out */
 #signing{

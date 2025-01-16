@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
+from cloudinary.models import CloudinaryField
 
 # https://stackoverflow.com/questions/68968059/how-can-i-allow-users-to-create-their-own-posts-in-django
 def create_post(request):
