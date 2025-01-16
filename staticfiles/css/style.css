@@ -31,6 +31,21 @@ p {
 .link-colour{
     color: #0072bb !important;
 }
+
+.custom-button{
+    background-color: #0072bb;
+    color: white;
+    font-size: medium;
+    border: solid 2px white;
+}
+
+.custom-button:hover{
+    background-color: #fffafa34;
+    color: #ffe81f;
+    border: solid 2px #0072bb;
+    box-shadow: 0 0 5px #0072bb, 0 0 25px #0072bb;
+}
+
 /* navbar */
 
 .navbar-custom, .nav-link {
@@ -41,14 +56,18 @@ p {
     color: #0072bb !important;
 }
 
-/* card */
 
+/* card */
 .custom-card {
     background-color: #fffafa34;
     color: #ffe81f;
     display: flex;
     justify-content: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
 }
+
 
 /* sign in/out */
 #signing{
@@ -57,11 +76,13 @@ p {
     display: inline-block;
 }
 
-#signing button{
+/* #signing button, #postButton{
     background-color: #fffafa34;
     color: #ffe81f;
     font-size: medium;
-}
+    border: solid 2px white;
+} */
+
 
 .sign-out-glowing-box{
     box-shadow: 0 0 5px #EB212E, 0 0 25px #EB212E;
@@ -95,7 +116,10 @@ p {
 #id_email,
 #id_username,
 #id_login,
-#id_password {
+#id_password,
+#id_content,
+#id_status {
     background-color: #fffafa34;
     color: #ffe81f;
+    border: none;
 }

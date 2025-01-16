@@ -9,7 +9,7 @@ class Post(models.Model):
     User, on_delete=models.CASCADE, related_name="feed_posts")
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
     updated_on = models.DateTimeField(auto_now=True)
     class Meta:
         ordering = ["-created_on"]
