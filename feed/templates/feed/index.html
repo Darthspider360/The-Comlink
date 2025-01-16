@@ -2,14 +2,41 @@
 {% block content %}
 {% load static %}
 
-{% for post in object_list %}
-<div class="card custom-card text-center col-md-7">
-    <div class="card-body">
-        <h5 class="card-title">{{post.title}}</h5>
-        <p class="card-text">{{post.content}}</p>
-        <p class="card-text"><small class="text-body-secondary">{{post.created_on}}</small></p>
+<a button type="submit" class="btn custom-button" href="{% url 'post' %}">Make a post</a>
+
+<!-- index.html content starts here -->
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3">
+            <div class="row d-flex justify-content-center">
+                {% for post in post_list %}
+                <div class="col-md-7">
+                    <div class="card mb-7 custom-card text-center">
+                        <div class="card-body">
+                            <p class="card-text h4">{{ post.content | safe }}</p>
+                            <div class="image-container">
+                                {% if "placeholder" not in post.file.url %}
+                                <img class="" src=" {{ post.file.url }}" alt="{{ post.title }}">
+                                {% else %}
+
+                                {% endif %}
+                                
+                            </div>
+                                <hr />
+                                <p class="card-text small d-flex justify-content-end"><em>{{ post.created_on}} |
+                                        {{ post.author }}</em></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
     </div>
-    <img src="..." class="card-img-bottom" alt="...">
-</div>
-{% endfor %}
-{% endblock content %}
+    {% endblock content %}

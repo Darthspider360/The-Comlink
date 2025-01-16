@@ -10,10 +10,9 @@ def create_post(request):
     if request.method == "POST":
         Post_form = PostForm(request.POST)
         if Post_form.is_valid():
-            post = Post_form.save(commit=False)
-            post.author = request.user
-            post.post = post
-            post.save()
+            content = Post_form.save(commit=False)
+            content.author = request.user
+            content.save()
             messages.add_message(request, messages.SUCCESS,
             'posted')
             return HttpResponseRedirect(reverse("home")) #redirecting to a new URL
@@ -22,7 +21,7 @@ def create_post(request):
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
-    template_name = "post_list.html"
+    template_name = "feed/index.html"
 
 def post_detail(request, slug):
     """

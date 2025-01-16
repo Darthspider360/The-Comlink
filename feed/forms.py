@@ -4,7 +4,7 @@ from django import forms
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('content', 'status')
+        fields = ('content', 'status', 'file',)
        
 
 class CommentForm(forms.ModelForm):

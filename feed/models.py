@@ -1,13 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
-    post = models.TextField()
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="feed_posts")
     content = models.TextField()
+    file = CloudinaryField('image', default="empty")
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
     updated_on = models.DateTimeField(auto_now=True)
