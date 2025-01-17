@@ -38,38 +38,39 @@
     </div>
     <!-- Displaying Comments -->
     <div class="row d-flex justify-content-center">
-        <div class="col-md-7 mt-3 ">
+        <div class="col-7 mt-3 ">
             <h3>Comments:</h3>
 
             <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
             {% for comment in comments %}
-            <div class="card card-body custom-card justify-content-start">
-                <div class="comments">
-                    <div class="fs-4" id="comment{{ comment.id }}">
+            <div class="card card-body custom-card">
+                <div class="row justify-content-between comments">
+                    <div class="fs-4 col-auto justify-content-start" id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
-                    <p class="meta-info">
+                    {% if user.is_authenticated and comment.author == user %}
+                    <div class="buttons d-flex justify-content-end col-2">
+                        <button class="btn btn-edit" comment_id="{{ comment.id }}"><i class="fa-solid fa-pencil"
+                                style="color: #2ff924;"></i></button>
+                        <button class="btn btn-delete" comment_id="{{ comment.id }}"><i class="fa-solid fa-trash-can"
+                                style="color: #eb212e;"></i></button>
+
+                    </div>
+                    {% elif user.is_authenticated %}
+                    <div class="buttons d-flex justify-content-end col-2">
+                        <button class="btn" comment_id="{{ comment.id }}"><i class="fa-solid fa-flag"
+                                style="color: #fe212e;"></i></i></button>
+                    </div>
+                    {% endif %}
+                    <p class="meta-info d-flex justify-content-end">
                         <span>
                             {{ comment.author }} | {{ comment.created_on }}
                         </span>
                     </p>
                 </div>
 
-                {% if user.is_authenticated and comment.author == user %}
-                <div class="buttons ms-auto">
-                    <button class="btn btn-edit" comment_id="{{ comment.id }}"><i class="fa-solid fa-pencil"
-                            style="color: #2ff924;"></i></button>
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}"><i class="fa-solid fa-trash-can"
-                            style="color: #eb212e;"></i></button>
-                    
-                </div>
-                {% elif user.is_authenticated %}
-                <div class="buttons ms-auto">
-                    <button class="btn" comment_id="{{ comment.id }}"><i class="fa-solid fa-flag"
-                            style="color: #fe212e;"></i></i></button>
-                </div>
-                {% endif %}
+
 
                 <!-- Our for loop ends here -->
             </div>
@@ -85,7 +86,8 @@
                         <button id="submitButton" type="submit" class="btn custom-button">Submit</button>
                     </form>
                     {% else %}
-                    <p class="h4"><a class="{% if request.path == login_url %}active{% endif %} text-reset post-link" href="{% url 'account_login' %}">Log in</a> to leave a comment</p>
+                    <p class="h4"><a class="{% if request.path == login_url %}active{% endif %} text-reset post-link"
+                            href="{% url 'account_login' %}">Log in</a> to leave a comment</p>
                     {% endif %}
                 </div>
             </div>
