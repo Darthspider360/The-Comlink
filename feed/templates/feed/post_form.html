@@ -7,7 +7,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-7">
                 <h3>Write your post:</h3>
-                <form id="Post_form" method="post">
+                <form id="Post_form" method="post" enctype="multipart/form-data">
                     {{ Post_form | crispy }}
                     {% csrf_token %}
                     <button id="postButton" type="submit" class="btn btn-lg custom-button">Post!</button>

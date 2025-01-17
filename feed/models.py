@@ -8,7 +8,7 @@ class Post(models.Model):
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="feed_posts")
     content = models.TextField(blank=True)
-    file = CloudinaryField('file', blank=True)
+    file = CloudinaryField('file', default="placeholder", blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
     updated_on = models.DateTimeField(auto_now=True)
