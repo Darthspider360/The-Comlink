@@ -15,7 +15,6 @@ body{
 
 p {
     font-family: 'Montserrat', sans-serif;
-    color:#ffe81f
 }
 
 .content {
@@ -52,11 +51,23 @@ p {
     color: #ffe81f;
 }
 
-.nav-link.active {
+.nav-link.active, .post-link:hover{
     color: #0072bb !important;
 }
+.custom-modal{
+    background-color: black;
+}
+.meta-info{
+    color: #ffe91f72;
+    font-size: small;
+    font-weight: light;
+    font-style: italic;
+}
 
-
+.comment-count{
+    color: #0072bb;
+    font-size: larger;
+}
 /* card */
 .custom-card {
     background-color: #fffafa34;
@@ -73,6 +84,12 @@ p {
 .scale {
     width: 100%;
     height: auto;
+}
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    height: auto;
+    width: 75%;
 }
 
 /* sign in/out */
@@ -124,7 +141,8 @@ p {
 #id_login,
 #id_password,
 #id_content,
-#id_status {
+#id_status,
+#id_body {
     background-color: #fffafa34;
     color: #ffe81f;
     border: none;
