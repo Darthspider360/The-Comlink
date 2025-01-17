@@ -9,7 +9,7 @@ from cloudinary.models import CloudinaryField
 # https://stackoverflow.com/questions/68968059/how-can-i-allow-users-to-create-their-own-posts-in-django
 def create_post(request):
     if request.method == "POST":
-        Post_form = PostForm(request.POST)
+        Post_form = PostForm(request.POST, request.FILES)
         if Post_form.is_valid():
             content = Post_form.save(commit=False)
             content.author = request.user
@@ -24,7 +24,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "feed/index.html"
 
-def post_detail(request, slug):
+def post_view(request, id):
     """
     Display an individual :model:`feed.Post`.
 
@@ -35,12 +35,12 @@ def post_detail(request, slug):
 
     **Template:**
 
-    :template:`feed/post_detail.html`
+    :template:`feed/post_view.html`
     """
     if request.method == "POST":
         print("Received a POST request")
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    post = get_object_or_404(queryset, id=id)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.all().count() 
     if request.method == "POST":
@@ -51,13 +51,13 @@ def post_detail(request, slug):
             comment.post = post
             comment.save()
             messages.add_message(request, messages.SUCCESS,
-            'Comment submitted and awaiting approval')
+            'Comment submitted')
 
     comment_form = CommentForm()
     print("About to render template")
     return render(
         request,
-        "feed/post_detail.html",
+        "feed/post_view.html",
         { "post": post,
         "comments": comments,
         "comment_count": comment_count,
@@ -65,14 +65,14 @@ def post_detail(request, slug):
     },
     )
 
-def comment_edit(request, slug, comment_id):
+def comment_edit(request, id, comment_id):
     """
     view to edit comments
     """
     if request.method == "POST":
 
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, id=id)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
@@ -85,14 +85,14 @@ def comment_edit(request, slug, comment_id):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_view', args=[id]))
 
-def comment_delete(request, slug, comment_id):
+def comment_delete(request, id, comment_id):
     """
     view to delete comment
     """
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    post = get_object_or_404(queryset, id=id)
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:
@@ -101,4 +101,4 @@ def comment_delete(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_view', args=[id]))

@@ -6,5 +6,6 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
+    list_display = ('id','content',)
 
 admin.site.register(Comment)

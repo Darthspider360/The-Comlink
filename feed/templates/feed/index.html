@@ -15,27 +15,31 @@
                 <div class="col-md-7">
                     <div class="card mb-7 custom-card text-center">
                         <div class="card-body">
-                            <p class="card-text h4">{{ post.content | safe }}</p>
-                            <div class="image-container">
-                                {% if "placeholder" not in post.file.url %}
-                                <img class="scale" src=" {{ post.file.url }}" alt="{{ post.title }}">
+                            <a href="{% url 'post_view' post.id %}" class="post-link">
+                                <p class="card-text h4">{{ post.content | safe }}</p>
+                                <div class="image-container">
+                                    {% if "placeholder" not in post.file.url %}
+                                    <img class="scale" src=" {{ post.file.url }}" alt="{{ post.title }}">
 
-                                {% endif %}
-                                
-                            </div>
-                                <hr />
-                                <p class="card-text small d-flex justify-content-end"><em>{{ post.created_on}} |
-                                        {{ post.author }}</em></p>
+                                    {% endif %}
 
-                            </div>
+                                </div>
+                            </a>
+                            <hr>
+                            <p class="card-text small d-flex justify-content-end"><em>{{ post.created_on}} |
+                                    {{ post.author }}</em></p>
+
                         </div>
-                    </div>
-                    {% if forloop.counter|divisibleby:3 %}
-                    {% endif %}
-                    {% endfor %}
 
+
+                    </div>
                 </div>
+                {% if forloop.counter|divisibleby:3 %}
+                {% endif %}
+                {% endfor %}
+
             </div>
         </div>
     </div>
-    {% endblock content %}
+</div>
+{% endblock content %}
