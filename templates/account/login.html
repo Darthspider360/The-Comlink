@@ -9,7 +9,7 @@
 <div class="container-fluid">
   <div class="col-12 mt-3">
     <div class="row d-flex justify-content-center">
-      <div class="col-md-7">
+      <div class="col-5">
         <div class="card text-center sign-in-glowing-box custom-card" id="signing">
           <div class="card-body">
             <h5 class="card-title display-5">{% trans "Sign In" %}</h5>
@@ -24,7 +24,7 @@
               <a class="button secondaryAction" href="{% url 'account_reset_password' %}">
                 <p class="link-colour">{% trans "Forgot Password?" %}</p>
               </a>
-              <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+              <button class="custom-button" type="submit">{% trans "Sign In" %}</button>
             </form>
           </div>
         </div>
