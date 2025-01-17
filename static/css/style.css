@@ -35,7 +35,6 @@ p {
     background-color: #0072bb;
     color: white;
     font-size: medium;
-    border: solid 2px white;
 }
 
 .custom-button:hover{
@@ -51,7 +50,7 @@ p {
     color: #ffe81f;
 }
 
-.nav-link.active, .post-link:hover{
+.active, .post-link:hover, .nav-link:hover{
     color: #0072bb !important;
 }
 .custom-modal{
@@ -142,7 +141,8 @@ p {
 #id_password,
 #id_content,
 #id_status,
-#id_body {
+#id_body,
+#id_file {
     background-color: #fffafa34;
     color: #ffe81f;
     border: none;

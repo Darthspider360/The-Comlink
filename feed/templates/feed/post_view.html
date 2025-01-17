@@ -44,7 +44,7 @@
             <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
             {% for comment in comments %}
-            <div class="card-body custom-card justify-content-start">
+            <div class="card card-body custom-card justify-content-start">
                 <div class="comments">
                     <div class="fs-4" id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
@@ -76,7 +76,7 @@
             {% endfor %}
             <!-- Creating New Comments -->
             <div class="col-md-7 mt-3">
-                <div class="card-body">
+                <div class="card card-body custom-card">
                     {% if user.is_authenticated %}
                     <h3>Leave a comment:</h3>
                     <form id="commentForm" method="post" style="margin-top: 1.3em;">
