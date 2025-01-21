@@ -7,7 +7,7 @@ html, body {
 
 body{
     font-family: 'Orbitron', sans-serif;
-    background-image: url(/static/images/images.jpg);
+    background-image: url(/static/images/background.jpg);
     color: #ffe81f;
     display: flex;
     flex-direction: column;

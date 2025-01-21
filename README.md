@@ -83,25 +83,31 @@ As much as I would have loved to use the Star Wars offical font - I opted to cho
 ![Montserrat text sample](media/readme-images/font%20choice%20-%20montserrat.png)
 
 ### Images
-Since this site it so be used as a type of social media any images used in the main site will be provided by it's users, this inclludes the feed page and the profile page. The only image used on the site is the logo which was made using [Font Meme](https://fontmeme.com/star-wars-font/)
+Since this site it so be used as a type of social media any images used in the main site will be provided by it's users, this inclludes the feed page and the profile page. The only images used on the site is the logo which was made using [Font Meme](https://fontmeme.com/star-wars-font/):
 
 ![Font Meme Logo](static/images/logo.png)
 
-
+and the background image found on [Pintrest](https://uk.pinterest.com/pin/404057397815645775/):
+![Background image](static/images/background.jpg)
 ## Page Features
 
 ### Main Content
 The main content of the site will be provided by its users, this will be the feed page. This is how it could look once populated:
+![Feed page](media/readme-images/feed-page.png)
 
 #### Comments
-As part of the MVP of the project, users need to be able to interact with the posts - creating comments, editing and deleting them. Using example comments this is how they are presented.
+As part of the MVP of the project, users need to be able to interact with the posts - creating comments, editing and deleting them. Using example comments this is how they are presented:
+![Comment section](media/readme-images/comment-section.png)
 
 ### Signing in/out/up
-Since I'm using allauth for my accounts I had to go in and add styling to their provided pages. This is how they look:
-
+Since I'm using allauth for my accounts I had to go in and add styling to their provided pages. As you can see, this is where the lightsaber colours came in handy as I could add glow to represent each section of signing in.out/up. This is how they look:
+![Sign in page](media/readme-images/sign-in.png)
+![Sign out page](media/readme-images/sign-out.png)
+![Sign up page](media/readme-images/sign-up.png)
 
 Due to using allauth I have to used Devtools to allow me to find the ID of certain area's of their forms to perfect the styling to match the rest of the site - changing the form field backgrounds from solid white. Amy helped me with learning how to do this.
-
+![Devtools use](media/readme-images/devtools.png)
+![Devtools styling use](media/readme-images/devtools-styling.png)
 ### Footer
 While I do have a footer, it only provides minimal information so not to distract from the main page.
 
