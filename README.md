@@ -20,7 +20,6 @@ A long time ago in a galaxy far far away, the arma 3 community created the 501st
     - [Typography](#Typography)
     - [Imagery](#Imagery)
 - [Page Features](#page-features)
-    - 
     - [Main Content](#main-content)
         - 
     - [Footer](#footer)
@@ -72,7 +71,7 @@ and here is a snippet from the offical Star Wars wiki page:
 Using this photo and some research the closest blue I could link was French blue (hex code: #0072BB) and so, combining all the colours together I created this pallete using Coolors.
 ![Colour Pallete from Coolors](media/readme-images/Comlink%20colour%20pallete.png)
 
-While planning I wasn't 100% certain how many colours I would need and so, keeping on the Star wars theme, I went to get more colours - just in case.
+While planning I wasn't 100% certain how many colours I would need and so, keeping on the Star wars theme, I went to get more colours - just in case. (From the future: these colours did come in handy)
 ![Lightsaber Colours](media/readme-images/lightsaber%20colors.png)
 
 ### Typography 
@@ -84,37 +83,27 @@ As much as I would have loved to use the Star Wars offical font - I opted to cho
 ![Montserrat text sample](media/readme-images/font%20choice%20-%20montserrat.png)
 
 ### Images
+Since this site it so be used as a type of social media any images used in the main site will be provided by it's users, this inclludes the feed page and the profile page. The only image used on the site is the logo which was made using [Font Meme](https://fontmeme.com/star-wars-font/)
 
+![Font Meme Logo](static/images/logo.png)
 
 
 ## Page Features
 
-### -
-
-
-### -
-
-
-#### -
-
-
-#### -
-
-
 ### Main Content
+The main content of the site will be provided by its users, this will be the feed page. This is how it could look once populated:
+
+#### Comments
+As part of the MVP of the project, users need to be able to interact with the posts - creating comments, editing and deleting them. Using example comments this is how they are presented.
+
+### Signing in/out/up
+Since I'm using allauth for my accounts I had to go in and add styling to their provided pages. This is how they look:
 
 
-#### -
-
-
-#### -
-
-
-#### -
-
+Due to using allauth I have to used Devtools to allow me to find the ID of certain area's of their forms to perfect the styling to match the rest of the site - changing the form field backgrounds from solid white. Amy helped me with learning how to do this.
 
 ### Footer
-
+While I do have a footer, it only provides minimal information so not to distract from the main page.
 
 ## Responsivity 
 To make sure that the site was responsive across all devices I built it mobile first as this is most likely where people in a crisis will access the site.
@@ -156,9 +145,9 @@ I deployed my site using github and github pages. These are the steps I did:
 
 ## Credits
 - Amy for the README Layout idea
-- Copilot for design and coding support
+- Copilot for user stories and coding support
 - HTML & CSS Validator
 - Devtools Lighthouse
 - AutoPrifix
 - Mugs of tea and bacon sandwiches for moral support
-- Cans of Monster for energy (tracker: 1)
+- Cans of Monster for energy (order: 66)
