@@ -152,6 +152,7 @@ I deployed my site using github and github pages. These are the steps I did:
 ## Credits
 - Amy for the README Layout idea
 - Copilot for user stories and coding support
+- [Dev.to](https://dev.to/earthcomfy/django-user-profile-3hik) for user profile help
 - HTML & CSS Validator
 - Devtools Lighthouse
 - AutoPrifix

@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     author = models.ForeignKey(
-    User, on_delete=models.CASCADE, related_name="feed_posts")
+    User, on_delete=models.CASCADE, related_name="feed_poster")
     content = models.TextField(blank=True)
     file = CloudinaryField('file', default="placeholder", blank=True)
     created_on = models.DateTimeField(auto_now_add=True)

@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-darthspider3-thecomlink-cevzzt76mp0.ws.codeinstitute-ide.net', 'the-comlink-896502f13dfc.herokuapp.com']
+ALLOWED_HOSTS = ['8000-darthspider3-thecomlink-cevzzt76mp0.ws.codeinstitute-ide.net', 'the-comlink-896502f13dfc.herokuapp.com',]
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
 
 # Application definition
