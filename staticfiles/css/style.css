@@ -68,7 +68,7 @@ p {
     color: #0072bb;
     font-size: larger;
 }
-/* card */
+/* feed */
 .custom-card {
     background-color: #fffafa34;
     color: #ffe81f;
@@ -90,6 +90,37 @@ p {
     overflow: hidden;
     height: auto;
     width: 75%;
+}
+
+/* profile */
+#profile-pic {
+    height: 60vw;
+    width: 60vw;
+    /* makes the square image a circle */
+    border-radius: 50%;
+    max-width: 200vw;
+    max-height: 200vw;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.profile-cards{
+    background-color: #fffafa34;
+    color: #ffe81f;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    border: none;
+}
+
+.picture-card{
+    background-color: #fffafa34;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    margin: 5px;
+    border: none;
 }
 
 /* sign in/out */
