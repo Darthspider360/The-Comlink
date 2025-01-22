@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="row my-3 p-3">
-        <h1>This is the profile page for {{user.username}}</h1>
+{% load static %}
+{% load crispy_forms_tags %}
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="card col-12 custom-card">
+            <div class="card-title">
+                <div class="profile-image col-5">
+                    <img src="{% if 'placeholder' in profile.avatar.url %}/static/images/clone-placeholder.png {%else%}{{profile.avatar.url}}{%endif%}"
+                        class="d-inline-block align-text-center" height="10%" width="10%">
+                </div>
+                <div class="name col-5">
+                    <p class="card-text h4 d-flex justify-content-center">{{profile.rank}} {{profile.user}}</p>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
 
 {% endblock content %}
