@@ -25,21 +25,14 @@
                                 <div class="image-container">
                                     {% if "placeholder" not in post.file.url %}
                                     <img class="scale" src=" {{ post.file.url }}" alt="{{ post.title }}">
-
                                     {% endif %}
-
                                 </div>
                             </a>
                             <hr>
                             <p class="card-text d-flex justify-content-end meta-info"><em>{{ post.created_on}} |
                                     {{ post.author }}</em>
                             </p>
-                            
-                            
-
                         </div>
-
-
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}

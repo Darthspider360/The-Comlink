@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from .forms import Profileform
+from feed.models import Post
 
 
 def create_profile(request):
@@ -25,3 +26,7 @@ def profile(request):
     profile = get_object_or_404(Profile, user=request.user)
     # profile_avatar = "1234"
     return render(request, "profile_page/profile.html",{'profile': profile})
+
+def UserPostList(request):
+    UserPostList = Post.objects.filter(author=request.user)
+    return render(request, "profile_page/profile.html", {'UserPostList' : UserPostList})
