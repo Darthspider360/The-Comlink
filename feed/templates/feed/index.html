@@ -24,7 +24,7 @@
                                 <p class="post-link card-text h4">{{ post.content | safe }}</p>
                                 <div class="image-container">
                                     {% if "placeholder" not in post.file.url %}
-                                    <img class="scale" src=" {{ post.file.url }}" alt="{{ post.title }}">
+                                    <img class="scale" src=" {{ post.file.url }}" alt="{{ post.content }}">
                                     {% endif %}
                                 </div>
                             </a>

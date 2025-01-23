@@ -115,6 +115,7 @@ p {
 
 .picture-card{
     background-color: #fffafa34;
+    color: #ffe81f;
     display: flex;
     justify-content: center;
     height: auto;
