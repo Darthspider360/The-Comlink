@@ -31,6 +31,29 @@ p {
 .link-colour{
     color: #0072bb;
 }
+.custom-edit {
+    color: #2ff924;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.custom-edit:hover{
+    color: #2ff924;
+    border: solid 2px #2ff924;
+    box-shadow: 0 0 5px #0072bb, 0 0 25px #2ff924;
+}
+
+.custom-delete {
+    color: #EB212E;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.custom-delete:hover{
+    color: #EB212E;
+    border: solid 2px #EB212E;
+    box-shadow: 0 0 5px #0072bb, 0 0 25px #EB212E;
+}
 
 .custom-button{
     background-color: #0072bb;
@@ -61,8 +84,7 @@ p {
     color: #ffe91f72;
     font-size: small;
     font-weight: light;
-    font-style: italic;
-    
+    font-style: italic; 
 }
 
 .comment-count{
@@ -92,6 +114,7 @@ p {
     height: auto;
     width: 75%;
 }
+
 
 /* profile */
 
