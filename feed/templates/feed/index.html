@@ -3,21 +3,24 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% if user.is_authenticated %}
-<a button type="submit" class="btn custom-button" href="{% url 'post' %}">Make a post</a>
-{% else %}
-<a button type="submit" class="btn custom-button" href="{% url 'account_login' %}">Sign in to make a post</a>
-{% endif %}
-
-<!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
+        <div class="col-12 text-center">
+            {% if user.is_authenticated %}
+            <a class="btn custom-button btn-lg size" href="{% url 'post' %}">Make a post</a>
+            {% else %}
+            <a class="btn custom-button btn-lg size" href="{% url 'account_login' %}">Sign in to make a post</a>
+            {% endif %}
+        </div>
+    </div>
 
+    <!-- index.html content starts here -->
+    <div class="row d-flex justify-content-center">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3">
             <div class="row d-flex justify-content-center">
                 {% for post in post_list %}
-                <div class="col-md-7">
+                <div class="col-10">
                     <div class="card mb-7 custom-card text-center">
                         <div class="card-body">
                             <a href="{% url 'post_view' post.id %}" class="text-decoration-none text-reset">

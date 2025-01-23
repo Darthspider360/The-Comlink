@@ -15,6 +15,7 @@ body{
 
 p {
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
 }
 
 .content {
@@ -93,35 +94,37 @@ p {
 }
 
 /* profile */
+
+#flex-move{
+    display: flex;
+    justify-content: center;
+}
 #profile-pic {
-    height: 60vw;
-    width: 60vw;
+    height: 30vw;
+    width: 30vw;
+    border: #0072bb solid 2px;
     /* makes the square image a circle */
     border-radius: 50%;
-    max-width: 200vw;
-    max-height: 200vw;
-    padding: 10px;
     object-fit: cover;
+    margin-bottom: 5px;
 }
 
-.profile-cards{
+.profile-cards, .picture-card{
     background-color: #fffafa34;
     color: #ffe81f;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 5px;
     border: none;
+    padding: 5px;
+    max-height: fit-content;
+    max-width: 200px;
 }
 
 .picture-card{
-    background-color: #fffafa34;
-    color: #ffe81f;
-    display: flex;
-    justify-content: center;
     height: auto;
-    width: auto;
-    margin: 5px;
-    border: none;
+    max-width: 400px;
 }
 
 /* sign in/out */
@@ -179,4 +182,29 @@ p {
     background-color: #fffafa34;
     color: #ffe81f;
     border: none;
+}
+
+
+/* media query for tablets and higher */
+@media screen and (min-width:768px) {
+   #flex-move{
+        display: flex;
+        justify-content: space-evenly;
+   }
+
+   /* .profile-cards{
+        margin: 0;
+        padding: 0;
+   } */
+
+
+}
+
+
+/* media query for larger screens*/
+@media screen and (min-width:1200px) {
+    .size{
+        font-size: 1.25rem; /* Increase the font size */
+    }
+
 }

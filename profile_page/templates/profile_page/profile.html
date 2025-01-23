@@ -4,21 +4,27 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-12 picture-card card align-items-center">
+    <div class="row" id="flex-move">
+        <div class="col-sm-12 col-md-4 picture-card card align-items-center">
             <img src="{% if 'placeholder' in profile.avatar.url %}/static/images/clone-placeholder.png {%else%}{{profile.avatar.url}}{%endif%}"
-                alt="Profile Picture" class="img-fluid" id="profile-pic">
-            <h3>{{profile.rank}} {{profile.user}}'s Profile</h3>
+                alt="Profile Picture" id="profile-pic">
+            <h5>{{profile.rank}} {{profile.user}}</h5>
         </div>
-        <div class="col-sm-5 profile-cards card text-center">
-            <p>followers</p>
+        <div class="col-sm-5 col-md-4 card profile-cards card text-center">
+            <p class="h6">0</p>
+            <p class="small">followers</p>
         </div>
-        <div class="col-sm-5 profile-cards card text-center">
-            <p>following</p>
+        <div class="col-sm-5 col-md-4 card profile-cards card text-center">
+            <p class="h6">0</p>
+            <p class="small">following</p>
         </div>
-        <div class="col-sm-12 profile-cards card text-center">
+    </div>
+    <div class="row">
+        <div class="col-sm-12 card custom-card text-center">
             <p>{{profile.bio}}</p>
         </div>
+    </div>
+    <div class="row">
         <div class="text-center justify-content-center">
             <h2>Your Posts</h2>
             {% for post in user_posts %}
