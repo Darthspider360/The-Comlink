@@ -33,7 +33,7 @@ p {
 }
 .custom-edit {
     color: #2ff924;
-    font-size: medium;
+    font-size: x-small;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -45,7 +45,7 @@ p {
 
 .custom-delete {
     color: #EB212E;
-    font-size: medium;
+    font-size: x-small;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -142,7 +142,7 @@ p {
     border: none;
     padding: 5px;
     max-height: fit-content;
-    max-width: 200px;
+    max-width: 175px;
 }
 
 .picture-card{
@@ -215,10 +215,10 @@ p {
         justify-content: space-evenly;
         align-items: center;
    }
-
+   .custom-delete, .custom-edit{
+    font-size: medium;
+   }
    
-
-
 }
 
 
@@ -230,6 +230,8 @@ p {
     .profile-cards, .picture-card, .bio{
         font-size: 1.5rem;
     }
-    
+    .custom-delete, .custom-edit{
+        font-size: large;
+       }
 
 }

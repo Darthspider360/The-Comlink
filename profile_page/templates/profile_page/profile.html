@@ -5,22 +5,22 @@
 
 <div class="container">
     <div class="row" id="flex-move">
-        <div class="col-sm-12 col-md-4 picture-card card align-items-center">
+        <div class="col-11 col-sm-12 col-md-4 picture-card card align-items-center">
             <img src="{% if 'placeholder' in profile.avatar.url %}/static/images/clone-placeholder.png {%else%}{{profile.avatar.url}}{%endif%}"
                 alt="Profile Picture" id="profile-pic">
             <h5>{{profile.rank}} {{profile.user}}</h5>
         </div>
-        <div class="col-sm-5 col-md-4 card profile-cards card text-center">
+        <div class="col-5 col-sm-5 col-md-4 card profile-cards card text-center">
             <p class="h6">0</p>
             <p class="small">followers</p>
         </div>
-        <div class="col-sm-5 col-md-4 card profile-cards card text-center">
+        <div class="col-5 col-sm-5 col-md-4 card profile-cards card text-center">
             <p class="h6">0</p>
             <p class="small">following</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 card custom-card text-center">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-12 card custom-card text-center">
             <p class="bio">{{profile.bio}}</p>
         </div>
     </div>
