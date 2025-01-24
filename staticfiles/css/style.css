@@ -123,8 +123,8 @@ p {
     justify-content: center;
 }
 #profile-pic {
-    height: 30vw;
-    width: 30vw;
+    height: 25vw;
+    width: 25vw;
     border: #0072bb solid 2px;
     /* makes the square image a circle */
     border-radius: 50%;
@@ -213,12 +213,10 @@ p {
    #flex-move{
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
    }
 
-   /* .profile-cards{
-        margin: 0;
-        padding: 0;
-   } */
+   
 
 
 }
@@ -229,5 +227,9 @@ p {
     .size{
         font-size: 1.25rem; /* Increase the font size */
     }
+    .profile-cards, .picture-card, .bio{
+        font-size: 1.5rem;
+    }
+    
 
 }
