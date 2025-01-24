@@ -201,7 +201,10 @@ p {
 #id_content,
 #id_status,
 #id_body,
-#id_file {
+#id_file,
+#id_rank,
+#id_avatar,
+#id_bio{
     background-color: #fffafa34;
     color: #ffe81f;
     border: none;
@@ -215,7 +218,10 @@ p {
         justify-content: space-evenly;
         align-items: center;
    }
-
+   .custom-delete, .custom-edit{
+    font-size: medium;
+   }
+   
 }
 
 
@@ -227,6 +233,8 @@ p {
     .profile-cards, .picture-card, .bio{
         font-size: 1.5rem;
     }
-    
+    .custom-delete, .custom-edit{
+        font-size: large;
+       }
 
 }

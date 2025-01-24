@@ -201,7 +201,10 @@ p {
 #id_content,
 #id_status,
 #id_body,
-#id_file {
+#id_file,
+#id_rank,
+#id_avatar,
+#id_bio{
     background-color: #fffafa34;
     color: #ffe81f;
     border: none;

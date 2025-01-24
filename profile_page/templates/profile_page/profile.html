@@ -8,7 +8,11 @@
         <div class="col-11 col-sm-12 col-md-4 picture-card card align-items-center">
             <img src="{% if 'placeholder' in profile.avatar.url %}/static/images/clone-placeholder.png {%else%}{{profile.avatar.url}}{%endif%}"
                 alt="Profile Picture" id="profile-pic">
-            <h5>{{profile.rank}} {{profile.user}}</h5>
+            <div>
+                <h5>{{profile.rank}} {{profile.user}}</h5>
+            </div>
+
+
         </div>
         <div class="col-5 col-sm-5 col-md-4 card profile-cards card text-center">
             <p class="h6">0</p>
@@ -21,6 +25,11 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-11 col-sm-12 card custom-card text-center">
+            {% if user.is_authenticated and profile.user == user%}
+            <a class="btn size z-3 position-absolute" href="{% url 'createprofile' %}"><i class="fa-solid fa-pencil"
+                    style="color: #2ff924;"></i></a>
+            {% else %}
+            {%endif%}
             <p class="bio">{{profile.bio}}</p>
         </div>
     </div>
