@@ -58,14 +58,15 @@
         </div>
     </nav>
     <!-- displaying Django messages -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
+    <div class="container" id="message_container">
+        <div class="row justify-content-center">
+            <div class="col-7">
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible
   fade show card custom-card text-center" id="msg" role="alert">
                     {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" class="btn z-3 position-absolute" data-bs-dismiss="alert" aria-label="Close"
+                        id="close-button">x</button>
                 </div>
                 {% endfor %}
             </div>
@@ -85,6 +86,16 @@
     </script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/128240b0e7.js" crossorigin="anonymous"></script>
+    <!-- https://stackoverflow.com/questions/51682084/how-to-hide-django-message-after-it-is-displayed-for-few-seconds -->
+    <!-- suppose the `id` attribute of element is `message_container`. -->
+    <!-- <script>
+    var message_ele = document.getElementById("message_container");
+
+    setTimeout(function(){
+    message_ele.style.display = "none";
+    }, 5000);
+    </script> -->
+    <!-- Timeout is 3 sec, you can change it -->
     {% block extras %}
     {% endblock %}
 </body>
