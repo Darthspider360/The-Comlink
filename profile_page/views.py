@@ -10,17 +10,17 @@ from django.contrib.auth.models import User
 
 
 def create_profile(request):
+    
     if request.method == "POST":
         Profile_form = Profileform(request.POST, request.FILES)
-        if Profile_form.is_valid() and User == request.user:
+        if Profile_form.is_valid():
             profile = Profile_form.save(commit=False)
             profile.user = request.user #associate the profile with logged in usr.
             profile.save()
             messages.add_message(request, messages.SUCCESS,
             'profile saved')
             return HttpResponseRedirect(reverse('users-profile')) # take back to profile after save.
-    else:
-        Profile_form = Profileform()
+    Profile_form = Profileform()
     return render(request, "profile_page/profile_form.html", {"Profile_form": Profile_form})
 
 def edit_profile(request):
@@ -41,7 +41,7 @@ def edit_profile(request):
     else: 
         profile_form = Profileform(instance=profile) # pop form with current profile data.
     
-    return render(request, "profile_page/profile_form.html", {"profile_form": profile_form})
+    return render(request, "profile_page/profile_edit.html", {"profile_form": profile_form})
 
 @login_required
 def profile(request):
