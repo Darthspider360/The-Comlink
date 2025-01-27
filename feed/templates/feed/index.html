@@ -20,14 +20,14 @@
         <div class="col-12 mt-3">
             <div class="row d-flex justify-content-center">
                 {% for post in post_list %}
-                <div class="col-10">
+                <div class="col-9">
                     <div class="card mb-7 custom-card text-center">
                         <div class="card-body">
                             <a href="{% url 'post_view' post.id %}" class="text-decoration-none text-reset">
                                 <p class="post-link card-text h4">{{ post.content | safe }}</p>
                                 <div class="image-container">
                                     {% if "placeholder" not in post.file.url %}
-                                    <img class="scale" src=" {{ post.file.url }}" alt="{{ post.content }}">
+                                    <img class="feed-scale" src=" {{ post.file.url }}" alt="{{ post.content }}">
                                     {% endif %}
                                 </div>
                             </a>

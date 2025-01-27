@@ -104,9 +104,15 @@ p {
 .image-container {
     position: relative;
 }
-.scale {
-    width: 100%;
-    height: auto;
+.feed-scale {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.view-scale{
+    max-height: 100%;
+    max-width: 100%;
+
 }
 .masthead {
     margin-top: 10px;
@@ -207,13 +213,17 @@ p {
 #id_file,
 #id_rank,
 #id_avatar,
-#id_bio{
+#id_bio {
     background-color: #fffafa34;
     color: #ffe81f;
     border: none;
     margin-bottom: 5px;
 }
-
+ .form-control{
+    background-color: #fffafa34;
+    color: #ffe81f;
+    border: none;
+ }
 
 
 /* media query for tablets and higher */

@@ -9,9 +9,9 @@
                     <div class="card mb-7 custom-card">
                         <div class="card-body">
                             <p class="card-text h4 d-flex justify-content-center">{{ post.content | safe }}</p>
-                            <div class="image-container">
+                            <div class="image-container d-flex justify-content-center">
                                 {% if "placeholder" not in post.file.url %}
-                                <img class="scale" src=" {{ post.file.url }}" alt="{{ post.title }}">
+                                <img class="view-scale" src=" {{ post.file.url }}" alt="{{ post.title }}">
                                 {% endif %}
                             </div>
                             <hr />
