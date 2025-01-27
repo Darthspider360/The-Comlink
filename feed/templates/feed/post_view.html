@@ -51,15 +51,16 @@
                     </div>
                     {% if user.is_authenticated and comment.author == user %}
                     <div class="buttons d-flex justify-content-end col-2">
-                        <button class="btn btn-edit"  comment_id="{{ comment.id }}"><i class="fa-solid fa-pencil"
-                            style="color: #2ff924;" comment_id="{{ comment.id }}"></i></button>
-                        <button class="btn btn-delete" id="delete-button" comment_id="{{ comment.id }}"><i class="fa-solid fa-trash-can"
-                            style="color: #eb212e;" comment_id="{{ comment.id }}"></i></button>
+                        <button class="btn btn-edit" comment_id="{{ comment.id }}"><i class="fa-solid fa-pencil"
+                                style="color: #2ff924;" comment_id="{{ comment.id }}"></i></button>
+                        <button class="btn btn-delete" id="delete-button" comment_id="{{ comment.id }}"><i
+                                class="fa-solid fa-trash-can" style="color: #eb212e;"
+                                comment_id="{{ comment.id }}"></i></button>
 
                     </div>
                     {% elif user.is_authenticated %}
                     <div class="buttons d-flex justify-content-end col-2">
-                        <button class="btn" comment_id="{{ comment.id }}"><i class="fa-solid fa-flag"
+                        <button class="btn" href="#"><i class="fa-solid fa-flag"
                                 style="color: #fe212e;"></i></i></button>
                     </div>
                     {% endif %}
