@@ -153,8 +153,9 @@ p {
 /* sign in/out */
 #signing{
     font-size: larger;
-    width: auto;
+    width: 75vw;
     display: inline-block;
+    margin: 10px;
 }
 
 /* #signing button, #postButton{
@@ -188,7 +189,9 @@ p {
 
 #signup_form ul{
     font-family: 'Montserrat', sans-serif;
-    font-size: medium;
+    list-style-type: none;
+    font-size: small;
+    margin: 5px 10px 10px;
 }
 
 /* changing the styling of the log in and sign up forms - Credits to Amy for the help */
@@ -208,7 +211,9 @@ p {
     background-color: #fffafa34;
     color: #ffe81f;
     border: none;
+    margin-bottom: 5px;
 }
+
 
 
 /* media query for tablets and higher */

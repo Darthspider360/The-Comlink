@@ -188,7 +188,8 @@ p {
 
 #signup_form ul{
     font-family: 'Montserrat', sans-serif;
-    font-size: medium;
+    list-style-type: none;
+    font-size: small;
 }
 
 /* changing the styling of the log in and sign up forms - Credits to Amy for the help */
@@ -209,6 +210,7 @@ p {
     color: #ffe81f;
     border: none;
 }
+
 
 
 /* media query for tablets and higher */
