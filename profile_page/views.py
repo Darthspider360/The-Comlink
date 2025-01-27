@@ -12,15 +12,36 @@ from django.contrib.auth.models import User
 def create_profile(request):
     if request.method == "POST":
         Profile_form = Profileform(request.POST, request.FILES)
-        if Profile_form.is_valid():
+        if Profile_form.is_valid() and User == request.user:
             profile = Profile_form.save(commit=False)
-            profile.user = request.user
+            profile.user = request.user #associate the profile with logged in usr.
             profile.save()
             messages.add_message(request, messages.SUCCESS,
             'profile saved')
-            return HttpResponseRedirect(reverse("users-profile")) #redirecting to a new URL
-    Profile_form = Profileform()
+            return HttpResponseRedirect(reverse('users-profile')) # take back to profile after save.
+    else:
+        Profile_form = Profileform()
     return render(request, "profile_page/profile_form.html", {"Profile_form": Profile_form})
+
+def edit_profile(request):
+    """
+    view to edit profile
+    """
+    profile = get_object_or_404(Profile, user =request.user) # get the logged in user.
+    if request.method == "POST":
+        profile_form = Profileform(request.POST, request.FILES, instance=profile)
+        if profile_form.is_valid():
+            # Profile = profile_form.save(commit=False)
+            # Profile.save()
+            profile_form.save()
+            messages.add_message(request, messages.SUCCESS, 'Profile Updated!')
+            return HttpResponseRedirect(reverse('users-profile'))
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating Profile!')
+    else: 
+        profile_form = Profileform(instance=profile) # pop form with current profile data.
+    
+    return render(request, "profile_page/profile_form.html", {"profile_form": profile_form})
 
 @login_required
 def profile(request):

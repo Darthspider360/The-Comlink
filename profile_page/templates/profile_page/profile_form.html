@@ -8,7 +8,7 @@
             <div class="col-md-7">
                 <h3>Please create your Profile</h3>
                 <form id="Profile_form" method="post" enctype="multipart/form-data">
-                    {{ Profile_form | crispy }}
+                    {{ profile_form|crispy }}
                     {% csrf_token %}
                     <button id="postButton" type="submit" class="btn btn-lg custom-button">Save</button>
                 </form>

@@ -26,7 +26,7 @@
     <div class="row justify-content-center">
         <div class="col-11 col-sm-12 card custom-card text-center">
             {% if user.is_authenticated and profile.user == user%}
-            <a class="btn size z-3 position-absolute" href="{% url 'createprofile' %}"><i class="fa-solid fa-pencil"
+            <a class="btn size z-3 position-absolute" href="{% url 'updateprofile' %}"><i class="fa-solid fa-pencil"
                     style="color: #2ff924;"></i></a>
             {% else %}
             {%endif%}
