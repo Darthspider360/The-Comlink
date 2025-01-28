@@ -4,11 +4,13 @@ A long time ago in a galaxy far far away, the arma 3 community created the 501st
 
 <br>
 
-![Screenshot of my website mockup]()
+![Screenshot of my website mockup](media/readme-images/Comlink-mockup.png)
+
+Link to deployed site: [Comlink](https://the-comlink-896502f13dfc.herokuapp.com/)
 ---
 
 ## **Contents**
-
+- [AI]
 - [Basics](#Basic)
     - [Naming](#naming)
     - [User Stories](#user-stories)
@@ -42,6 +44,9 @@ A long time ago in a galaxy far far away, the arma 3 community created the 501st
 - [Credits](#credits)
 
 ---
+
+## AI use
+Please find the use of AI spoken throughout the README. I found I didn't use AI much so the times I did are included int he sections that it links to
 
 ## Basics
 
@@ -180,6 +185,7 @@ Some knows bugs include:
 - Report function not working and goes to 404 (done intentionally)
 - Posts can be made that contain nothing - form fields need a check function
 - the current avatar name isnt show when changing the avatar
+- image posts displayed on profile arent corretcly responsive
 
 ## Responsivity 
 To make sure that the site was responsive across all devices I built it mobile first as this is most likely where people in a crisis will access the site.
