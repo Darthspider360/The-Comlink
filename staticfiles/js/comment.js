@@ -1,3 +1,4 @@
+// Taken from code institute codestar walkthrough
 const editButtons = document.getElementsByClassName("btn-edit");
 const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");
