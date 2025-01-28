@@ -20,6 +20,7 @@ A long time ago in a galaxy far far away, the arma 3 community created the 501st
     - [Colour Scheme](#Colour-scheme)
     - [Typography](#Typography)
     - [Imagery](#Imagery)
+- [Agile](#)
 - [Page Features](#page-features)
     - [Main Content](#main-content)
     - [Footer](#footer)
@@ -39,7 +40,8 @@ A long time ago in a galaxy far far away, the arma 3 community created the 501st
     - [Cloudinary](#cloudinary-api)
     - [Heroku](#heroku-deployment)
 - [Credits](#credits)
---- 
+
+---
 
 ## Basics
 
@@ -107,6 +109,24 @@ And the placeholder avatar image found [here](https://imgbin.com/png/CfnPwTL4/cl
 
 I made sure to convert all the images to Webp [here](https://cloudconvert.com/):
 ![Webp convert](media/readme-images/webp-convert.png)
+
+## Agile
+I am very familiar with Agile development as I used this from an early age, for theis reason its almost second nature to me. For this reason I aimed to complete one page of the site at a time, creating each section as I went along and making sure each was style correctly and responsive so i didnt ahve to go along and do a massive overhaul. This also meant that (due to starting with the feed page) the site could be tested and used while I developed other pages allowing early deployment and use.
+
+### MoSCoW Prioritization
+
+I chose to follow the MoSCoW Prioritization method for Comlink, identifying and labelling my:
+
+- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project early, allowing me to develop the project further than originally planned.
+- **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
+- **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
+- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release. 
+
+### Kanban Board
+Since my project was stored in github I decided to use Githubs project boards for the Kanban board. This is where my user stories and MoSCoW prioritization were used.
+You can find the board [here](https://github.com/users/Darthspider360/projects/8)
+
+I also utilized the ability to create issues and sub issues from already created issues meaning I could concentrate on getting the MVP completed when some of the functions in my already designated issues ended up being unneeded for a certain part to function.
 
 ## Page Features
 
@@ -188,13 +208,7 @@ Future changes will include:
 
 ## Testing
 
-### LightHouse
-
-
-### HTML Validation
-
-
-### CSS Validation
+- For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 
 ## Deployment
@@ -302,7 +316,7 @@ To start the deployment process , please follow the below steps:
 
 ## Credits
 Some credits are included inline with the code.
-- Amy for the README Layout idea and deployment section
+- Amy for the README Layout idea and certain sections
 - Copilot for user stories and coding support
 - Coding Coaches.
 - [Dev.to](https://dev.to/earthcomfy/django-user-profile-3hik) for user profile help

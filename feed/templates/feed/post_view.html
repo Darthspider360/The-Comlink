@@ -14,7 +14,7 @@
                                 <img class="view-scale" src=" {{ post.file.url }}" alt="{{ post.title }}">
                                 {% endif %}
                             </div>
-                            <hr />
+                            <hr>
                             <p class="card-text meta-info d-flex justify-content-end"><em>{{ post.created_on}} |
                                     {{ post.author }}</em></p>
 
@@ -70,9 +70,6 @@
                         </span>
                     </p>
                 </div>
-
-
-
                 <!-- Our for loop ends here -->
             </div>
             {% endfor %}
@@ -94,27 +91,28 @@
             </div>
         </div>
     </div>
-    <!-- Delete confirmation modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content custom-modal">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Are you sure you want to delete your comment?
-                        This action cannot be undone.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a id="deleteConfirm" href="#" class="btn
+</div>
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete your comment?
+                    This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
-                </div>
             </div>
         </div>
     </div>
-    {% endblock content %}
-    {% block extras %}
-    <script src="{% static 'js/comment.js' %}"></script>
-    {% endblock %}
+</div>
+{% endblock content %}
+{% block extras %}
+<script src="{% static 'js/comment.js' %}"></script>
+{% endblock %}
