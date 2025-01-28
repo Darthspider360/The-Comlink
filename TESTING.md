@@ -34,15 +34,25 @@ I have had to follow a different approach for validating my HTML for this projec
 
 | HTML Source Code/Page | Errors | Warnings |
 | ---- | ------ | -------- | 
-| Home | 0 | 0 |
+| Home/Feed | 0 | 0 |
 | Sign In | 0 | 0 |
-| Sign Up | 0 | 0 |
-| Profile | 0 | 0 |
+| Sign Up | 4 | 0 |
+| Sign out | 0 | 0 |
+| Profile Page | 0 | 0 |
 | Edit Profile | 0 | 0 |
-| Articles | 0 | 0 |
 | Add Post | 0 | 0 |
 | View Post | 0 | 0 |
-| Edit Coment | 0 | 0 |
-| Delete Comment | 0 | 0 |
-| Forgot Password | 0 | 0 |
 | Error 404 | 0 | 0 |
+
+The 4 errors in the Sign up section are due to the AllAuth forms that I cant edit
+
+### Python Validation
+I used [CI python](https://pep8ci.herokuapp.com/#) for my python validation - checking the files i wrote and changed.
+
+| App Name | admin.py | forms.py | models.py | urls.py | views.py |
+|----|----|----|----|----|----|
+| Comlink(main project)| na | na | na | [no errors](media/readme-images/comlink-app-python.png) | na |
+| Feed | [no errors](media/readme-images/feed-admin-python.png) | [no errors](media/readme-images/feed-forms-python.png) | [no errors](media/readme-images/feed-models-python.png) | [no errors](media/readme-images/feed-urls-python.png) | [no errors](media/readme-images/feed-views-python.png) |
+| Profile Page | [no errors](media/readme-images/profile-admin-python.png) | [no errors](media/readme-images/profile-forms-python.png) | [no errors](media/readme-images/profile-models-python.png) | [no errors](media/readme-images/profile-urls-python.png) | [no errors](media/readme-images/profile-views-python.png) |
+
+### CSS Validation

@@ -6,4 +6,4 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Profile)
 class AboutAdmin(admin.ModelAdmin):
     summernote_fields = ('user',)
-    list_display = ('id','user',)
+    list_display = ('id', 'user',)
