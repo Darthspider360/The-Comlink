@@ -16,16 +16,16 @@ A long time ago in a galaxy far far away, the arma 3 community created the 501st
     - [User Stories: Issues](#user-stories-isssues)
 - [User Design](#user-design)
     - [Wireframes](#wireframes)
+    - [ERD](#erd)
     - [Colour Scheme](#Colour-scheme)
     - [Typography](#Typography)
     - [Imagery](#Imagery)
 - [Page Features](#page-features)
     - [Main Content](#main-content)
-        - 
     - [Footer](#footer)
 - [Responsivity](#responsivity)
     - [Mobile Layout](#mobile-layout)
-    - [Tablet Layout](#tablet-layout)
+    - [Tablet/PC Layout](#tablet-layout)
 - [Future Features](#future-features)
     - [Future Changes](#future-changes)
 - [Testing](#testing)
@@ -58,6 +58,13 @@ Since this site is heavily influenced by Star Wars, I wanted to keep the styling
 I drew up the wireframes using sketchbook - a drawing app that I use. The layout is simple so that the site can be easy to use. I only drew how the profile page will change on tablet and pc screens as the main feed page will just look the same only bigger.
 ![Wireframes screenshot](media/readme-images/wireframes.png)
 
+
+### ERD 
+Since I'm still not fully comfortable with the databases and relationships, I asked Copilot to help me with the ERD once i had finished the project:
+![Copilot helping with ERD](media/readme-images/ERD-AI-Help.png)
+
+From the information that Copilot gave me I was then able to use [Eraser.io](https://app.eraser.io/all) to create the visual diagram with all the connections - something that helped me understand what I'd build a little better:
+![ERD image](media/readme-images/diagram-export-28-01-2025-09_52_48.png)
 
 ### Colour Scheme
 
@@ -95,9 +102,33 @@ and the background image found on [Pintrest](https://uk.pinterest.com/pin/404057
 The main content of the site will be provided by its users, this will be the feed page. This is how it could look once populated:
 ![Feed page](media/readme-images/feed-page.png)
 
+A post is created by pressing the button at the top of the page - if you are logged it in will look like this:
+![Signed in user's post button](media/readme-images/make-post.png)
+And once pressed it will send you to this form view:
+![Post form](media/readme-images/Post-form.png)
+
+However, if you arent signed in, the button will appear like this - redirecting you to the sign in or sign up page:
+![Signed out user's post button](media/readme-images/post-button-change.png)
+
 #### Comments
-As part of the MVP of the project, users need to be able to interact with the posts - creating comments, editing and deleting them. Using example comments this is how they are presented:
+As part of the MVP of the project, users need to be able to interact with the posts - creating comments, viewing them, editing and deleting them (CRUD). Comments are found in the "Post view" section of the site, which is when you click on a specific post to go to its page and the comments section will appear underneath the post - also displaying the number of comments:
+![Post view](media/readme-images/post-view.png)
+Using example comments this is how they are presented for a logged in user:
 ![Comment section](media/readme-images/comment-section.png)
+![Comment icons](media/readme-images/comment-icons.png)
+Notice on the comments that there is an "edit" icon and a "delete" icon, these only appear for the comment author and allows them to edit and delete their comment as they wish. 
+On viewed comments that arent by the Signed in user, a flag icon will appear - this will be a future feature but for now it is linked to my custom 404 page:
+![Custom 404 page](media/readme-images/custom-404.png)
+
+If a user isnt logged in, no icons will appear and the option to leave a comment is locked behind a sign in section:
+![Log in to leave a comment](media/readme-images/logged-out-comment-view.png)
+
+#### Profile Page
+Another part of the MVP of the project was the profile page, which admittedly took me a while to perfect. While at this stage there isnt an ability for the user to delete their own account(only admins can), users can create, edit and view their own profiles. Here is what that looks like:
+![Profile page](media/readme-images/Profile-page.png)
+
+When you press the green pencil (edit button) this will take you to the form to change your profile - this form is the exact same as the profile creation form apart from the fact that the fields are prepopulated with their already existing data:
+![Profile create/edit page](media/readme-images/profile-edit.png)
 
 ### Signing in/out/up
 Since I'm using allauth for my accounts I had to go in and add styling to their provided pages. As you can see, this is where the lightsaber colours came in handy as I could add glow to represent each section of signing in.out/up. This is how they look:
@@ -117,7 +148,7 @@ To make sure that the site was responsive across all devices I built it mobile f
 ### Mobile Layout
 
 
-### Tablet Layout
+### Tablet/PC Layout
 
 
 ## Future Features
